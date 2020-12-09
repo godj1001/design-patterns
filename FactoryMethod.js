@@ -42,6 +42,7 @@ function product() {
   console.log('===>')
   let diskFactory = new DiskFactory()
   diskFactory.getProduct().createComputer()
+
 }
 
 product()

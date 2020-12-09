@@ -25,14 +25,12 @@ class Screen {
     }else{
       console.log('当~当~当~当，显示屏连接正常')
     }
-
   }
 }
 
 class Line {
   constructor(adapter) {
     this.type = 'VGA'
-
     if (adapter){
       this.type = adapter.transform(this.type)
     }
@@ -62,7 +60,6 @@ function construct() {
   line.setAdapter(adapter)
   computer.setLine(line)
   computer.connect()
-
 }
 
 construct()
