@@ -53,7 +53,7 @@ class GoodComputerBuild extends Builder{
   buildCpu() {
     super.buildCpu();
     console.log('cpu: i9')
-    this.product.setDisk('i9')
+    this.product.setCpu('i9')
   }
   buildDisk() {
     super.buildDisk();

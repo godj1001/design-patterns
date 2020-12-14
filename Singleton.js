@@ -37,3 +37,36 @@ function getSingle(fn){
 }
 let earthThree = getSingle(Earth)('Earth')
 console.log(earthTwe === earthThree) // true
+
+/**
+ * audio
+ */
+class Audio {
+  static instance
+  constructor() {
+    if (Audio.instance){
+      return Audio.instance
+    }else {
+      this.src = ''
+      this.isPlaying = false
+      Audio.instance = this
+    }
+  }
+
+  start(src){
+    this.src = src
+    this.isPlaying = true
+    // ....
+  }
+
+  pause(){
+    this.isPlaying = false
+  }
+  stop(){
+    this.src = ''
+    this.isPlaying = false
+  }
+}
+let audioOne = new Audio()
+let audioTwe = new Audio()
+console.log(audioOne === audioTwe)
